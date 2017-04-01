@@ -46,6 +46,7 @@
                 <h4>${ product.name }</h4>
               </div>
               <p class="mb-1">${ product.username } &middot; ${ product.email }</p>
+              <p class="mb-1">${ product.description } &middot; ${ product.age }</p>
             </li>
           </ul>
         </div>

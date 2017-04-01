@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Product;
+use App\Student;
 
 class SearchController extends Controller
 {
@@ -24,7 +24,7 @@ class SearchController extends Controller
         if($request->has('q')) {
 
             // Using the Laravel Scout syntax to search the products table.
-            $posts = Product::search($request->get('q'))->get();
+            $posts = Student::search($request->get('q'))->get();
 
             // If there are results return them, if none, return the error message.
             return $posts->count() ? $posts : $error;
